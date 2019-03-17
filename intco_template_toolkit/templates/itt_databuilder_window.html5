@@ -1,0 +1,31 @@
+<?php echo \Message::generate(); ?>
+<div id="tl_buttons">
+<?= $this->back; ?>
+</div>
+<div class="maintenance_inactive">
+  
+  <h2 class="sub_headline"><?php echo $GLOBALS['TL_LANG']['itt_databuilder']['headline_generate']; ?></h2>
+  <div class="tl_tbox"><p>
+    <?php echo $GLOBALS['TL_LANG']['itt_databuilder']['explanation_generate']; ?>
+  </p></div>
+
+  <div class="tl_tbox">
+    <?php $this->insert('js_highlight', []); ?>    
+
+    <pre>
+      <code class="php" style="border: 2px dashed darkgray;">&lt;?php
+<?php echo htmlspecialchars($this->code); ?>
+    </code>
+    </pre>
+    
+    <p style="text-align: right">
+      <a href="javascript:void(0);" onclick="document.getElementById('itt_code').select()">
+        <?= $GLOBALS['TL_LANG']['itt_databuilder']['select_all']; ?>
+      </a>
+    </p>
+    <textarea rows="30" cols="80" style="width: 100%; border: 2px dashed darkgray;  padding: 4px; min-height: 600px;" id="itt_code">&lt;?php 
+<?php echo $this->code; ?>
+    </textarea>
+  </div>
+
+</div>

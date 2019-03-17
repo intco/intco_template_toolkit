@@ -1,0 +1,75 @@
+/**
+ * code created by intco Template Toolkit extension for Contao cms
+ * visit http://www.intco.it for more information
+ * do not remove this copyright notice
+ */
+ <?php
+ $palette = trimsplit("[;,]", $this->palette);
+
+ 
+ $arrOut = array();
+ 
+ foreach ($palette as $f) {
+    
+    if (!isset($GLOBALS['TL_DCA'][$this->table]['fields'][$f])) {
+        continue;
+    }
+    
+    $arrOut[] = '    /* '.$GLOBALS['TL_LANG'][$this->table][$f][0].' - '. $GLOBALS['TL_LANG'][$this->table][$f][1].' */';
+    
+    $serialized = false;
+    
+    if (substr($this->model->$f, -1) == '}' )  {
+        $arr = unserialize($this->model->$f);
+        if ($arr === false) {
+            $serialized = false;
+        } else {
+            $serialized = true;
+        }
+    }
+    
+  
+    if (!$serialized) {
+        
+         if ($GLOBALS['TL_DCA'][$this->table]['fields'][$f]['inputType'] == 'fileTree') {
+            $arrOut[] = "    '".$f."' => base64_decode('".addcslashes(base64_encode($this->model->$f), "'")."'),";
+         } else {
+            $arrOut[] = "    '".$f."' => '".addcslashes($this->model->$f, "'")."',";
+         }
+    
+    } else {
+      
+         if ($GLOBALS['TL_DCA'][$this->table]['fields'][$f]['inputType'] == 'fileTree') {
+            $value = array();
+            
+            $value[] = 'array(';
+            
+            foreach ($arr as $item) {
+               $value[] = "        base64_decode('".addcslashes(base64_encode($item), "'")."'),";
+            }
+            $value[] = '    )';
+
+            $value = implode("\n", $value);
+            $arrOut[] = "    '".$f."' => serialize(".$value."),";
+         } else {
+            $value = var_export($arr, 1);
+            $value = str_replace("\n", "\n    ", $value);
+            $arrOut[] = "    '".$f."' => serialize(".$value."),";
+            
+         }
+    }
+ }
+ 
+ 
+ ?>
+ 
+ $arrData = array(
+<?php    echo implode("\n", $arrOut); ?>
+
+ );
+
+$data = new \intco\TT\ArrayData($arrData, <?php echo json_encode($this->table); ?>);
+ 
+$module = new \<?php echo $this->className; ?>($data);
+ 
+echo $module->generate();

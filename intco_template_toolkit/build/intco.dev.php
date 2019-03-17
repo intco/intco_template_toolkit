@@ -1,0 +1,16 @@
+<?php 
+/*=intco.contaodev.femodule.start~eyJjbGFzc25hbWUiOiAiQ29udGVudFRlbXBsYXRlIiwgIm1vZHVsZWdyb3VwIjogImludGNvX3RlbXBsYXRlX3Rvb2xraXQiLCAibW9kdWxlbmFtZSI6ICJpdHRfY2V0ZW1wbGF0ZSIsICJuYW1lc3BhY2UiOiAiaW50Y29fdGVtcGxhdGVfdG9vbGtpdCJ9~start=*/
+/** intco.it */
+/*=intco.contaodev.femodule.stop~eyJjbGFzc25hbWUiOiAiQ29udGVudFRlbXBsYXRlIiwgIm1vZHVsZWdyb3VwIjogImludGNvX3RlbXBsYXRlX3Rvb2xraXQiLCAibW9kdWxlbmFtZSI6ICJpdHRfY2V0ZW1wbGF0ZSIsICJuYW1lc3BhY2UiOiAiaW50Y29fdGVtcGxhdGVfdG9vbGtpdCJ9~stop=*/
+/*=intco.contaodev.class.start~eyJjbGFzc25hbWUiOiAiRGF0YUJ1aWxkZXIiLCAibmFtZXNwYWNlIjogImludGNvX3RlbXBsYXRlX3Rvb2xraXQifQ==~start=*/
+/** intco.it */
+/*=intco.contaodev.class.stop~eyJjbGFzc25hbWUiOiAiRGF0YUJ1aWxkZXIiLCAibmFtZXNwYWNlIjogImludGNvX3RlbXBsYXRlX3Rvb2xraXQifQ==~stop=*/
+/*=intco.contaodev.class.start~eyJjbGFzc25hbWUiOiAiQXJyYXlEYXRhIiwgIm5hbWVzcGFjZSI6ICJpbnRjb190ZW1wbGF0ZV90b29sa2l0In0=~start=*/
+/** intco.it */
+/*=intco.contaodev.class.stop~eyJjbGFzc25hbWUiOiAiQXJyYXlEYXRhIiwgIm5hbWVzcGFjZSI6ICJpbnRjb190ZW1wbGF0ZV90b29sa2l0In0=~stop=*/
+/*=intco.contaodev.class.start~eyJjbGFzc25hbWUiOiAiRGNhSGVscGVyIiwgIm5hbWVzcGFjZSI6ICJpbnRjb190ZW1wbGF0ZV90b29sa2l0In0=~start=*/
+/** intco.it */
+/*=intco.contaodev.class.stop~eyJjbGFzc25hbWUiOiAiRGNhSGVscGVyIiwgIm5hbWVzcGFjZSI6ICJpbnRjb190ZW1wbGF0ZV90b29sa2l0In0=~stop=*/
+/*=intco.contaodev.dca.start~eyJmaWVsZE5hbWUiOiAiIiwgImZpZWxkVHlwZSI6ICIiLCAiYmVfZW50cnkiOiAiZHVtbXkiLCAic3FsZGVmaW5pdGlvbnMiOiAidGxfc2V0dGluZ3Muc3FsIiwgInRhYmxlbmFtZSI6ICJ0bF9zZXR0aW5ncyIsICJiZV9ncm91cCI6ICJkdW1teSJ9~start=*/
+/** intco.it */
+/*=intco.contaodev.dca.stop~eyJmaWVsZE5hbWUiOiAiIiwgImZpZWxkVHlwZSI6ICIiLCAiYmVfZW50cnkiOiAiZHVtbXkiLCAic3FsZGVmaW5pdGlvbnMiOiAidGxfc2V0dGluZ3Muc3FsIiwgInRhYmxlbmFtZSI6ICJ0bF9zZXR0aW5ncyIsICJiZV9ncm91cCI6ICJkdW1teSJ9~stop=*/
